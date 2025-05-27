@@ -1,22 +1,25 @@
-def classificar_idade(idade):
-    if 0 <= idade <= 12:
-        return "Criança"
-    elif 13 <= idade <= 17:
-        return "Adolescente"
-    elif 18 <= idade <= 59:
-        return "Adulto"
-    elif idade >= 60:
-        return "Idoso"
+def classificar_imc(imc):
+    if imc < 18.5:
+        return "Abaixo do peso"
+    elif imc < 25:
+        return "Peso normal"
+    elif imc < 30:
+        return "Sobrepeso"
     else:
-        return "Idade inválida"
+        return "Obeso"
 
 def main():
     try:
-        idade = int(input("Digite a sua idade: "))
-        categoria = classificar_idade(idade)
-        print(f"Categoria: {categoria}")
+        peso = float(input("Digite o peso (kg): "))
+        altura = float(input("Digite a altura (m): "))
+
+        imc = peso / (altura ** 2)
+        classificacao = classificar_imc(imc)
+
+        print(f"IMC: {imc:.2f}")
+        print(f"Classificação: {classificacao}")
     except ValueError:
-        print("Por favor, digite um número inteiro válido para a idade.")
+        print("Por favor, insira valores numéricos válidos para peso e altura.")
 
 if __name__ == "__main__":
     main()

@@ -1,8 +1,8 @@
 def main():
     try:
-        nome = input("Antonio Lobo: ").strip()
-        salario_fixo = float(input(" R$ 3.000,00 "))
-        total_vendas = float(input(" R$ 5.000,00 "))
+        nome = input("Nome do vendedor: ").strip()
+        salario_fixo = float(input("Salário fixo: R$ "))
+        total_vendas = float(input("Total de vendas: R$ "))
 
         comissao = total_vendas * 0.15
         total_receber = salario_fixo + comissao

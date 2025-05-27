@@ -14,4 +14,5 @@ def main():
     except ValueError:
         print("Por favor, digite um ano válido (número inteiro).")
 
-if __na
+if __name__ == "__main__":
+    main()
